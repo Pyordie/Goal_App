@@ -17,6 +17,7 @@ def add_goal():
 goals = functions.get_goals()
 for i , goali in enumerate(goals):
     checkbox = st.checkbox(goali, key=goali)
+    ## deleting goals :
     if checkbox:
         goals.pop(i)
         functions.update_goals(goals)
@@ -25,6 +26,6 @@ for i , goali in enumerate(goals):
 ## adding goals
 st.text_input("Add your goals: ", on_change=add_goal, key="new_goal")
 
-## deleting goals :
+
 
 
